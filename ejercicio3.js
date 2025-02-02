@@ -39,11 +39,19 @@ const users = [
 ];
 
 function vecesSonidoAgregado(lista) {
-    let sonidos = [];
+    let sonidos = {};
 
     for (let item of lista) {
-        console.log(item);
+        for (let sonido in item.favoritesSounds) {
+            if (!(sonido in sonidos)) {
+                sonidos[sonido] = 1;
+            } else {
+                sonidos[sonido]++;
+            }
+        }
     }
+    console.log(sonidos);
+    return sonidos;
 }
 
 vecesSonidoAgregado(users);

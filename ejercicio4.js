@@ -14,3 +14,5 @@ const mainCharacters = [
     "Anakin",
     "Obi-Wan",
 ];
+
+findArrayIndex(mainCharacters, "");

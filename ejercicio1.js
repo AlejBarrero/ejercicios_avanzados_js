@@ -25,3 +25,19 @@ const movies = [
         categories: ["comedia", "aventura", "animación"],
     },
 ];
+
+function filtrarCategorias(lista) {
+    let arrayCategorias = [];
+
+    for (let item of lista) {
+        for (categoria of item.categories) {
+            if (!arrayCategorias.includes(categoria)) {
+                arrayCategorias.push(categoria);
+            }
+        }
+    }
+    console.log(arrayCategorias);
+    return arrayCategorias;
+}
+
+filtrarCategorias(movies);

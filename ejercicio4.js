@@ -32,7 +32,7 @@ function removeItem(array, texto) {
     let index = findArrayIndex(array, texto);
 
     if (index !== -1) {
-        array.splice(index, 1)
+        array.splice(index, 1);
     } else {
         console.log("El elemento no se encuentra en el array");
     }
